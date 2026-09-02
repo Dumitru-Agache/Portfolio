@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="256"
+     height="72"
+     viewBox="0 0 256 72"
+     fill="none"
+     role="img"
+     aria-labelledby="dima-logo-title dima-logo-desc">
+  <title id="dima-logo-title">DIMA</title>
+  <desc id="dima-logo-desc">Monogramă D geometrică și wordmark DIMA, finisaj argintiu, pentru navbar.</desc>
+
+  <defs>
+    <linearGradient id="dima-metal" x1="12" y1="6" x2="58" y2="66" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="0.24" stop-color="#D9DBE0"/>
+      <stop offset="0.48" stop-color="#F5F6F8"/>
+      <stop offset="0.72" stop-color="#B6BAC2"/>
+      <stop offset="1" stop-color="#858A94"/>
+    </linearGradient>
+
+    <linearGradient id="dima-word" x1="96" y1="21" x2="256" y2="52" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="0.52" stop-color="#D8DBE1"/>
+      <stop offset="1" stop-color="#AEB3BC"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Monograma: inelul exterior al literei D -->
+  <path
+    d="M7.5 8H35C51.6 8 64.5 20.4 64.5 36C64.5 51.6 51.6 64 35 64H7.5L16 55.5H35C46.5 55.5 55.5 47 55.5 36C55.5 25 46.5 16.5 35 16.5H16.5L7.5 8Z"
+    fill="url(#dima-metal)"/>
+
+  <!-- Piciorul și diagonala monogramei -->
+  <path
+    d="M9.5 22.5H20L47.1 49.6L40.5 56.2L20 35.7V50.1L9.5 60.6V22.5Z"
+    fill="url(#dima-metal)"/>
+
+  <!-- Wordmark desenat ca vector; fără dependență de font -->
+  <g stroke="url(#dima-word)"
+     stroke-width="3.2"
+     stroke-linecap="square"
+     stroke-linejoin="miter">
+    <!-- D -->
+    <path d="M96 23.5V48.5H105.5C115.4 48.5 122.5 43.5 122.5 36C122.5 28.5 115.4 23.5 105.5 23.5H96Z"/>
+    <!-- I -->
+    <path d="M146 23.5V48.5"/>
+    <!-- M -->
+    <path d="M169 48.5V23.5L182 44L195 23.5V48.5"/>
+    <!-- A -->
+    <path d="M220 48.5L233 23.5L246 48.5"/>
+  </g>
+</svg>
