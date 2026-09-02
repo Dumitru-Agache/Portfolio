@@ -439,6 +439,7 @@ function selectProject(id) {
                         src={project.image}
                         alt={project.title}
                         draggable="false"
+                        loading="lazy"
                       />
                     ) : (
                       <span>

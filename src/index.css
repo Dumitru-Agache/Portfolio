@@ -1761,17 +1761,6 @@ button:hover {
 
 @media ( prefers-reduced-motion: reduce) 
 {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-delay: 0ms !important;
-    animation-iteration-count: 1 !important;
-  }
-  .projects-light-bulb {
-    animation: none;
-  }
-
   .project-card-visual,
   .project-card-visual img,
   .project-play-button {
