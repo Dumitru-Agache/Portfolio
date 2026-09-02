@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import ArrowUpRight from './ArrowUpRight'
 
 function Projects({ language }) {
   const [activeProject, setActiveProject] = useState(1)
@@ -421,43 +422,50 @@ function selectProject(id) {
               key={copyIndex}
             >
               {projects.map((project) => (
-                <button
-                  type="button"
-                  className={`project-card ${
-                    activeProject === project.id
-                      ? 'project-active'
-                      : ''
-                  }`}
-                  key={`${copyIndex}-${project.id}`}
-                  onClick={() =>
-                    selectProject(project.id)
-                  }
-                >
-                  <div className="project-card-visual">
-                    {project.image ? (
-                      <img
-                        src={project.image}
-                        alt={project.title}
-                        draggable="false"
-                        loading="lazy"
-                      />
-                    ) : (
-                      <span>
-                        {project.title}
-                      </span>
-                    )}
-                  </div>
+                <article
+  className={`project-card ${
+    activeProject === project.id
+      ? 'project-active'
+      : ''
+  }`}
+  key={`${copyIndex}-${project.id}`}
+>
+  <a
+    href={project.liveUrl || undefined}
+    target={project.liveUrl ? '_blank' : undefined}
+    rel={project.liveUrl ? 'noreferrer' : undefined}
+    className={`project-card-link ${
+      !project.liveUrl ? 'project-link-disabled' : ''
+    }`}
+    onClick={(event) => {
+      if (!project.liveUrl) {
+        event.preventDefault()
+      }
+    }}
+  >
+    <div className="project-card-visual">
+      {project.image ? (
+        <img
+          src={project.image}
+          alt={project.title}
+          draggable="false"
+          loading="lazy"
+        />
+      ) : (
+        <span>{project.title}</span>
+      )}
+    </div>
+  </a>
 
-                  <div className="project-card-title">
-                    <span>
-                      {project.number} /
-                    </span>
-
-                    <span>
-                      {project.title}
-                    </span>
-                  </div>
-                </button>
+  <button
+    type="button"
+    className="project-card-select"
+    onClick={() => selectProject(project.id)}
+  >
+    <span>{project.number} /</span>
+    <span>{project.title}</span>
+  </button>
+</article>
               ))}
             </div>
           ))}
@@ -558,7 +566,8 @@ function selectProject(id) {
     target={selectedProject.liveUrl ? '_blank' : undefined}
     rel={selectedProject.liveUrl ? 'noreferrer' : undefined}
   >
-    {text.viewProject} ↗
+    {text.viewProject}
+    <ArrowUpRight />
   </a>
 
   <a
@@ -566,7 +575,8 @@ function selectProject(id) {
     target={selectedProject.githubUrl ? '_blank' : undefined}
     rel={selectedProject.githubUrl ? 'noreferrer' : undefined}
   >
-    {text.github} ↗
+    {text.github}
+    <ArrowUpRight />
   </a>
 </div>
 

@@ -1,3 +1,4 @@
+import ArrowUpRight from './ArrowUpRight'
 function Contact({ language }) {
   const content = {
     ro: {
@@ -42,7 +43,7 @@ function Contact({ language }) {
             className="contact-button"
             href="mailto:agdumitru787@gmail.com"
           >
-            {text.button} ↗
+            {text.button} <ArrowUpRight />
           </a>
         </div>
 
@@ -58,7 +59,7 @@ function Contact({ language }) {
             rel="noreferrer"
           >
             <span>{text.linkedin}</span>
-            <strong>LinkedIn ↗</strong>
+            <strong>LinkedIn <ArrowUpRight /> </strong>
           </a>
 
           <a
@@ -67,7 +68,7 @@ function Contact({ language }) {
             rel="noreferrer"
           >
             <span>{text.github}</span>
-            <strong>GitHub ↗</strong>
+            <strong>GitHub <ArrowUpRight /> </strong>
           </a>
         </div>
       </div>
