@@ -41,16 +41,16 @@ function Contact({ language }) {
 
           <a
             className="contact-button"
-            href="mailto:agdumitru787@gmail.com"
+            href="mailto:contact@dimabuilds.dev"
           >
             {text.button} <ArrowUpRight />
           </a>
         </div>
 
         <div className="contact-links">
-          <a href="mailto:agdumitru787@gmail.com">
+          <a href="mailto:contact@dimabuilds.dev">
             <span>{text.email}</span>
-            <strong>agdumitru787@gmail.com</strong>
+            <strong>contact@dimabuilds.dev<ArrowUpRight /> </strong>
           </a>
 
           <a
@@ -63,7 +63,7 @@ function Contact({ language }) {
           </a>
 
           <a
-            href="https://github.com/dz9v69tgsz-maker"
+            href="https://github.com/Dumitru-Agache"
             target="_blank"
             rel="noreferrer"
           >
