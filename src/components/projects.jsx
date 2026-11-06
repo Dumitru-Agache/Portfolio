@@ -58,7 +58,7 @@ function Projects({ language }) {
         en: 'A presentation website for a bar with a strong identity, elegant design and a fluid user experience.',
       },
 
-      liveUrl: 'https://barphilosophy.agdumitru787.workers.dev',
+      liveUrl: 'https://barphilosophy.ro',
       githubUrl: '',
     },
 
